@@ -1,0 +1,26 @@
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Virtual Environment
+void_venv/
+venv/
+.env
+*.venv
+Pipfile
+Pipfile.lock
+
+# Django-related
+db.sqlite3
+media/
+staticfiles/
+
+# Logs and temporary files
+*.log
+debug.log
+
+# VS Code & IDE-specific files
+.vscode/
+.idea/
