@@ -21,7 +21,7 @@ class UserVoidSignupSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ['username', 'email', 'password', 'password2', 'role']  
+        fields = ['username', 'email', 'password', 'password2']  
 
     # Validate that password and password2 match
     def validate(self, attrs):
@@ -35,7 +35,7 @@ class UserVoidSignupSerializer(serializers.ModelSerializer):
         user = User(
             username=validated_data['username'],
             email=validated_data['email'],
-            role=validated_data.get('role', 'Academy'),  # Default role is academy
+            role='Academy_member',  # Default role is academy
         )
         user.set_password(validated_data['password'])  # Hash password
         user.save()
